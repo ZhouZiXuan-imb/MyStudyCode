@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<button>点我看效果</button>
+<script src="./lib/jquery.js"></script>
+<script>
+    // 原生js的ajax
+    // 添加button的点击事件
+    $('button').on('click', function () {
+        // 1. 实例化xhr对象
+        let xhr = new XMLHttpRequest();
+        // 2. 设置请求方式和请求地址
+        xhr.open('GET', 'http://localhost:3000/data')
+        // 3. 设置要发送的数据
+        xhr.send(null);
+        // 4. 监听xhr获取到的数据
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

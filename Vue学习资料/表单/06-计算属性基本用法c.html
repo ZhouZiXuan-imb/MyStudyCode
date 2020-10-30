@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="number" v-model.number="num1">
+    <span>+</span>
+    <input type="number" v-model.number="num2">
+    <span>=</span>
+    <input type="number" disabled v-bind:value="result">
+  </div>
+  <!-- <script type="text/javascript" src="js/vue.js"></script> -->
+  <script src="../lib/vue-3.0.js"></script>
+  <script type="text/javascript">
+    const vm = Vue.createApp({
+      data() {
+        return {
+          num1: '',
+          num2: ''
+        }
+      },
+      methods: {
+
+      },
+      computed: {
+        result: function () {
+          return this.num1 + this.num2
+        }
+      }
+    }).mount('#app')
+
+  </script>
+</body>
+
+</html>

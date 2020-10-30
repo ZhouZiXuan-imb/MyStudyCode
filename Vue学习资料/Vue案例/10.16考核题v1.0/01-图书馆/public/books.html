@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid {
+            margin: auto;
+            width: 530px;
+            text-align: center;
+        }
+
+        .grid table {
+            border-top: 1px solid #C2D89A;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grid th,
+        td {
+            padding: 10px;
+            border: 1px dashed orange;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .grid th {
+            background-color: orange;
+        }
+
+        .grid .book {
+            padding-bottom: 10px;
+            padding-top: 5px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div class="grid">
+        <div>
+            <h1>图书管理</h1>
+            <div>
+                图书数量:
+                <span v-text="length"></span>
+            </div>
+            <div class="book">
+                <div>
+                    <label for="id">
+                        编号：
+                    </label>
+                    <input type="text" id="id" :disabled="flag" v-model="id">
+                    <label for="name">
+                        名称：
+                    </label>
+                    <input type="text" id="name" v-model="name">
+                    <button @click="handleAddBook" :disabled="cfFlag">提交</button>
+                </div>
+            </div>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(item,index) in books" :key="item.id">
+                <td v-text="item.id"></td>
+                <td v-text="item.name"></td>
+                <td v-text="item.date"></td>
+                <td>
+                    <a href="" @click.prevent="updateBook(item.id)">修改</a>
+                    <span>|</span>
+                    <a href="" @click.prevent="removeBook(item.id)">删除</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="./lib/vue-3.0.0.js"></script>
+<script src="./lib/axios.js"></script>
+<script>
+    // axios.defaults.baseURL = 'http://localhost:3000'
+    let vm = Vue.createApp({
+        data() {
+            return {
+                // id输入框的节流阀 点击了修改按钮之后 不能让用户修改id 让id输入框按钮不可用
+                flag: false,
+                // 提交按的节流阀 如果输入的书名在数据中已经存在 那么就让提交按钮不可用
+                cfFlag: false,
+                id:'',
+                name: '',
+                // 所有数据存在这里
+                books: '',
+                // 所有数据的总数 显示有多少本书功能
+                length:''
+            }
+        },
+        // 获取或有图书信息 因为我们使用axios获取到的是promise对象  所以使用async和await来修饰promise得到值就是正常的值
+        async created() {
+            // 刚进入页面需要获取数据 下面是调用获取数据的方法
+            this.refreshPage();
+        },
+        // 写方法
+        methods: {
+            // 获取/刷新数据
+            async refreshPage() {
+                // 使用axios发起请求
+                let res = await axios.get('http://localhost:3000/books')
+                // 把从后端获取到的数据赋值给data中的books
+                this.books = res.data
+            },
+            // 添加数据
+            async handleAddBook() {
+                // 判断是data中定义的flag属性是不是true 如果是true 说明
+                if(this.flag) {
+                    let result = await axios.put(`http://localhost:3000/books/${this.id}`,{
+                        name:this.name
+                    })
+                    if(result.data.status == 200) {
+                        this.refreshPage()
+                        this.name = ''
+                        this.id = ''
+                        this.flag = true
+                    }
+
+                } else {
+                    // 判断是否输入了name值  如果没有弹出提示框
+                    if (this.name.trim() == '') return alert('请输入要添加的书名');
+                    // 使用axios发起请求
+                    let result = await axios.post('http://localhost:3000/books', {
+                        name: this.name
+                    })
+                    // 判断是否添加成功  如果添加成功返回的result会又status  200为成功  500为失败
+                    if (result.status == 200) {
+                        // 如果成功 刷新页面
+                        this.refreshPage();
+                        this.name = ''
+                        this.id = ''
+                    }
+                }
+
+            },
+            // 删除功能  需要通过id删除  所以需要传来一个要删除的数据的id
+            async removeBook(id) {
+                let result = await axios.delete(`http://localhost:3000/books/${id}`)
+                if (result.data.status == 200) {
+                    this.refreshPage();
+                }
+            },
+            // 修改功能
+            async updateBook(id) {
+                // 点击修改按钮回显数据
+                let result = await axios.get(`http://localhost:3000/books/${id}`)
+                if(result.status === 200) {
+                    console.log(result)
+                    this.name = result.data.name
+                    this.id = result.data.id
+                    this.flag = true
+                }
+            }
+
+        },
+        // 监听器
+        watch: {
+            name() {
+                let that =  this
+                let result = this.books.some(function (item) {
+                    if (item.name == that.name) return true;
+                })
+                if (result == true) {
+                    this.cfFlag = true;
+                } else {
+                    this.cfFlag = false;
+                }
+            },
+            books() {
+                this.length = this.books.length;
+            }
+        },
+    })
+
+    vm.mount('#app')
+</script>
+</body>
+
+</html>

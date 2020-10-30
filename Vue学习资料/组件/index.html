@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.father {
+			width: 300px;
+			height: 300px;
+			border: 2px solid #ff0000
+		}
+
+		.son {
+			width: 200px;
+			height: 200px;
+			border: 2px solid green
+		}
+	</style>
+</head>
+
+<body>
+<div id="app">
+	<father></father>
+
+</div>
+<script src="./lib/vue-3.0.js"></script>
+<script>
+	let vm = Vue.createApp({})
+
+
+	vm.component('father', {
+		data() {
+			return {
+
+			}
+		},.
+		methods: {
+			handle(val) {
+				console.log(val);
+				console.log('猪'+val);
+			}
+		},
+		template: `
+            <div class='father'>
+    <p >我是父组件</p>
+    <son @qw='handle'></son>
+</div>
+            `
+	})
+
+	vm.component('son', {
+		data() {
+			return {
+				tip: '屁屁'
+			}
+		},
+		template: `
+            <div class='son'>
+    <p @click='$emit("qw",tip)'>我是子组件</p>
+</div>
+            `
+	})
+
+
+
+	vm.mount('#app')
+</script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="fName">
+        <button @click="fadd">添加</button>
+        <button @click="removeLast">删除</button>
+        <button @click="Rpl">替换</button>
+
+        <ul>
+            <li v-for="(item,index) in af">{{item}}</li>
+        </ul>
+    </div>
+    <script src="../lib/vue-3.0.js"></script>
+    <script>
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    af: ['apple', 'bnane', 'tomato'],
+                    fName: ''
+                }
+            },
+            methods: {
+                // 添加
+                fadd() {
+                    if (this.fName != '') {
+                        this.af.push(this.fName)
+                        this.fName = ''
+                    } else {
+                        alert('不能为空')
+                    }
+                },
+                // 删除最后一个
+                removeLast() {
+                    this.af.pop();
+                },
+                // 替换
+                Rpl() {
+                    this.af.splice(2)
+
+                }
+            },
+
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9e1b2e5e-7ab9-4475-9906-91f1178f3056" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1icTRfAvhbbO2bUpKLIeWkkskgu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/01-购物车综合案例-分析功能/lib" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.常规" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\classwork\Vue\购物车综合案例\01-购物车综合案例-分析功能\lib" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e1b2e5e-7ab9-4475-9906-91f1178f3056" name="默认的" comment="" />
+      <created>1602205874885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602205874885</updated>
+      <workItem from="1602205876035" duration="11104000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="203" key="#检查" timestamp="1602229434015">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="586" y="203" key="#检查/0.0.1920.1050@0.0.1920.1050" timestamp="1602229434015" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1602210837540">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1602210837540" />
+    <state x="685" y="123" width="549" height="804" key="find.popup" timestamp="1602206141414">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="685" y="123" width="549" height="804" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1602206141414" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1602211387800">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1602211387800" />
+  </component>
+</project>

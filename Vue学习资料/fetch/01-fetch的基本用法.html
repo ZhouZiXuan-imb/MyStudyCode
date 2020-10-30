@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+               // fetch返回的是一个Promise对象  // response  返回值
+    fetch('http://localhost:3000/fdata').then(function (res) {
+        // 使用res.text()接收返回值
+        return res.text();
+    }).then(function (data) {
+        console.log(data);
+    })
+
+</script>
+</body>
+</html>

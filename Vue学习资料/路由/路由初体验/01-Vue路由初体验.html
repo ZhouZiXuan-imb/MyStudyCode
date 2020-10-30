@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="app">
+    <div>
+        <a href="#/zhuye">主页</a>
+        <a href="#/keji">科技</a>
+        <a href="#/caijing">财经</a>
+        <a href="#/yule">娱乐</a>
+    </div>
+    <main>
+        <component :is="comName"></component>
+    </main>
+</div>
+
+
+<script src="lib/vue-3.0.js"></script>
+<script>
+    location.hash = '#/zhuye'
+    // 主页组件
+    const zhuye = {
+        template: `<h1>主页信息</h1>`
+    };
+    // 科技组件
+    const keji = {
+        template: `<h1>科技信息</h1>`
+    }
+    // 财经组件
+    const caijing = {
+        template: `<h1>财经信息</h1>`
+    }
+    // 娱乐组件
+    const yule = {
+        template: `<h1>娱乐信息</h1>`
+    }
+
+    // console.log(Vue.createApp())
+
+    let vm = Vue.createApp({
+        // 数据域
+        data() {
+            return {
+                comName: 'zhuye'
+            }
+        },
+        // 局部组件
+        components: {
+            zhuye: zhuye,
+            keji: keji,
+            caijing: caijing,
+            yule: yule,
+        },
+    }).mount('#app')
+
+    // window自带的一个方法 ,监听hash的变化
+    window.onhashchange = function () {
+        // console.log(location.hash)
+        switch (location.hash) {
+            case '#/zhuye' :
+                vm.$data.comName = "zhuye"
+                break;
+            case '#/keji' :
+                vm.$data.comName = "keji"
+                break;
+            case '#/caijing' :
+                vm.$data.comName = "caijing"
+                break;
+            case '#/yule' :
+                vm.$data.comName = "yule"
+                break;
+        }
+    }
+
+
+</script>
+</body>
+</html>

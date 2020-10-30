@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <a v-html="msg" v-bind:class="red1" :href="link">
+
+        </a>
+    </div>
+
+    <script src="../lib/vue-3.0.js"></script>
+
+    <!-- <script>
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    msg: '<p>我是一个p标签</p>',
+                    red1: 'red',
+                    link: 'http://www.baidu.com'
+                }
+            }
+        })
+        vm.mount('#app')
+    </script> -->
+
+    <script>
+        let color = {
+            data() {
+                return {
+                    msg: 'hahahhahahahhah',
+                    red1: 'red',
+                    link: 'http://www.baidu.com'
+                }
+            }
+        }
+        Vue.createApp(color).mount('#app')
+    </script>
+</body>
+
+</html>

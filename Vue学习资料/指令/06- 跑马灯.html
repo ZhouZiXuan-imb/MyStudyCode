@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. 创建模板 -->
+    <div id="app">
+        <button class="start" @click="handleRun">浪起来</button>
+        <button class="end" @click="handleStop">消停会</button>
+        <h3 v-text="msg"></h3>
+    </div>
+    <!-- 2. 引入Vue文件 -->
+    <script src="../lib/vue-3.0.js"></script>
+    <script>
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    msg: "稳住,我们能赢!!!",
+                    interval: null
+                }
+            },
+            methods: {
+                handleRun() {
+                    if (this.interval !== null) return;
+                    this.interval = setInterval(() => {
+                        // 截取字符串中的第一个字
+                        let start = this.msg.slice(0, 1)
+                        let end = this.msg.slice(1)
+                        this.msg = end + start;
+                    }, 500)
+                },
+                handleStop() {
+                    clearInterval(this.interval)
+                    this.interval = null;
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{msg}}
+        <content></content>
+    </div>
+    <script src="./lib/vue-3.0.js"></script>
+    <script>
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    msg:'我是跟组件',
+                }
+            }
+        })
+
+        vm.component('content',{
+            data() {
+                return {
+                    msg:'我是新组件，全局组件'
+                };
+            },
+            template:`<div>{{msg}}</div>`
+        })
+
+        vm.mount('#app')
+    </script>
+</body>
+
+</html>

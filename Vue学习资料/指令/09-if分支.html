@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if="msg == A" v-cloak>A</div>
+        <div v-else-if="msg == B">B</div>
+        <div v-else>C</div>
+    </div>
+</body>
+<script src="../lib/vue-3.0.js"></script>
+<script>
+    let vm = Vue.createApp({
+        data() {
+            return {
+                msg: 'A'
+            }
+        }
+    }).mount('#app')
+</script>
+
+</html>

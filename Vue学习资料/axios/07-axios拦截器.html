@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script type="text/javascript" src="./lib/axios.js"></script>
+  <script type="text/javascript">
+    /*
+      axios拦截器
+    */
+    // 在axios发送数据给后台之前做出的行为
+    axios.interceptors.request.use(function (config) {
+      config.headers['mytoken'] = 'zhouzixuan'
+      return config
+    },function (err) {
+      console.log(err)
+    })
+
+    // 在后台接收到axios发来的数据之后做出相应之前的行为
+    axios.interceptors.response.use(function (res) {
+      let data = res.data
+      return data
+    },function (err) {
+      console.log(err)
+    })
+
+    axios.get('http://localhost:3000/axios-json').then(function (res) {
+      console.log(res)
+    })
+
+  </script>
+</body>
+
+</html>

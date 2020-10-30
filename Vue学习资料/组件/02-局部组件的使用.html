@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <hello></hello>
+    </div>
+    <script src="../组件/lib/vue-3.0.js"></script>
+    <script>
+
+        let hello = {
+            data() {
+                return {
+                    data: '我是局部组件'
+                }
+            },
+            template: `<div>{{data}}</div>`
+        }
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    msg: '我是跟组件'
+                }
+            },
+            components: {
+                "hello": hello
+            }
+        })
+        vm.mount('#app')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let hello = {
+        //     data() {
+        //         return {
+        //             msg: '我是局部组件'
+        //         }
+        //     },
+        //     template: `
+        //     <div>
+        //     {{msg}}
+        //     <father></father>
+        //     </div>`
+        // }
+
+
+        // let vm = Vue.createApp({
+        //     data() {
+        //         return {
+
+        //         }
+        //     },
+        //     components: {
+        //         "hello": hello
+        //     }
+        // })
+
+
+        // vm.component('father', {
+        //     data() {
+        //         return {
+        //             msg: '我是father组件'
+        //         }
+        //     },
+        //     template: `
+        //         <div>
+        //         {{msg}}
+        //         </div>`
+        // })
+
+        // vm.mount('#app')
+    </script>
+</body>
+
+</html>

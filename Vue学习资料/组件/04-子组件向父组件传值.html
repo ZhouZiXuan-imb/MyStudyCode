@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <father>
+        </father>
+    </div>
+    <script src="./lib/vue-3.0.js"></script>
+    <script>
+
+        let vm = Vue.createApp({})
+
+        vm.component('father', {
+            data() {
+                return {
+                    msg: ''
+                }
+            },
+            // 1. 父组件定义一个方法
+            methods: {
+                // 4. 值传给方法后  方法中需要一个参数来接受值 val
+                handleClick(val) {
+                    this.msg = val
+                    console.log(this.msg);
+                }
+            },
+            // 2. 把这个方法通过自定义事件传给子组件
+            template: `<div><son @father="handleClick"></son></div>`
+        })
+
+        vm.component('son', {
+            data() {
+                return {
+                    msg: '我是子组件中的msg',
+                    title: '我是标题'
+                }
+            },
+            // 3. 子组件使用$emit('父组件中的自定义事件名',要传给父组件的值)方法接收到父组件传来的方法  在把要给父组件的值使用$emit()方法的第二个参数传给父组件中的函数
+            template: `<div><h1 @click="$emit('father',msg)">{{title}}</h1></div>`
+        })
+
+
+        vm.mount('#app')
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let vm = Vue.createApp({})
+        // vm.component('father', {
+        //     data() {
+        //         return {
+        //             msg: '我是父组件中的msg',
+        //         }
+        //     },
+        //     methods: {
+        //         fatherF(val) {
+        //             console.log(this.msg + val);
+        //         }
+        //     },
+        //     template: `<div>{{msg}}  <son @father="fatherF"></son></div>`
+        // })
+        // vm.component('son', {
+        //     data() {
+        //         return {
+        //             msg: '我是子组件中的msg',
+        //         }
+        //     },
+        //     template: `<div @click="$emit('father',msg)">{{msg}}</div>`
+        // })
+        // vm.mount('#app')
+
+    </script>
+</body>
+
+</html>

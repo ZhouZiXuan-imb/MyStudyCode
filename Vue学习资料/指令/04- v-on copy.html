@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 0.引入Vue -->
+    <script src="../lib/vue-3.0.js"></script>
+    <!-- 1.创建模板 -->
+    <div id="app">
+        <button v-html="msg" v-on:click="onclick('周子轩')"></button>
+        <div id="box" @mousemove="onmousemove('周子轩')"></div>
+    </div>
+
+    <!-- 2.写入数据 -->
+    <script>
+        let click = {
+            data() {
+                return {
+                    count: 0,
+                    msg: '点击我试试'
+                }
+            },
+            methods: {
+                onclick(name) {
+                    console.log(name + '点击了我');
+                },
+                onmousemove(name) {
+                    console.log(name + '移入了我');
+                }
+            }
+
+        }
+        Vue.createApp(click).mount('#app')
+
+    </script>
+    <!-- 3.控制器 -->
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<!-- 前端交互--异步编程与Promise概述 -->
+<button>点我看效果</button>
+<script src="./lib/jquery.js"></script>
+<script>
+
+  // 这是回调地狱的方式,代码可读性差 这个时候需要用到Promise
+  // $('button').on('click',function() {
+  //     $.ajax({
+  //         type: 'GET',
+  //         url: 'http://localhost:3000/data',
+  //         data: null,
+  //         success: function (result) {
+  //             console.log(result)
+  //             $.ajax({
+  //                 type: 'GET',
+  //                 url: 'http://localhost:3000/data1',
+  //                 data: null,
+  //                 success: function (result) {
+  //                     console.log(result)
+  //                     $.ajax({
+  //                         type: 'GET',
+  //                         url: 'http://localhost:3000/data2',
+  //                         data: null,
+  //                         success: function (result) {
+  //                             console.log(result)
+  //
+  //                         }
+  //                     })
+  //                 }
+  //             })
+  //         }
+  //     })
+  // })
+
+  // 封装一个方法  使用Promise解决回调地狱  现在的这种方式叫面条代码
+  $('button').on('click',function() {
+    promise('http://localhost:3000/data').then(function (data) {
+      console.log(data);
+      return promise('http://localhost:3000/data1')
+    }).then(function(data) {
+      console.log(data)
+      return promise('http://localhost:3000/data2')
+    }).then(function (data) {
+      console.log(data)
+    })
+  })
+
+  function promise(url) {
+    let p = new Promise(function (resolve, reject) {
+      $.ajax({
+        type: 'GET',
+        url: `${url}`,
+        data: null,
+        success: function (result) {
+          // 把结果传给成功时的回调
+          resolve(result);
+        }
+      })
+    })
+    // 把p这个实例对象返回给这个函数
+    return p
+  }
+
+
+  // 通过代码嵌套的方式可以解决异步代码按照顺序执行
+  // 但是嵌套代码 可读性差
+  // 我们把嵌套代码 也叫回调地狱
+  // 如何把嵌套代码变成面条代码 就要使用Promise
+
+
+  // $('.box').width(200).height(300).css().animate()
+</script>
+</body>
+
+</html>

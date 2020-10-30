@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gg {
+            width: 500px;
+            height: 500px;
+            border: 3px solid red;
+            float: left;
+        }
+
+        .cdd {
+            width: 500px;
+            height: 500px;
+            border: 3px solid green;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <gg></gg>
+    <cdd></cdd>
+</div>
+<script src="../组件/lib/vue-3.0.js"></script>
+<!--  第一步 引入mitt插件  -->
+<script src="./lib/mitt-2.1.0.js"></script>
+<script>
+
+    let vm = Vue.createApp({})
+    // 定义mitt方法
+    let emitter = mitt();
+    console.log(emitter)
+    vm.component('gg',{
+        data() {
+            return {
+                msg:'我是哥哥组件,我要向弟弟组件传值',
+            }
+        },
+        methods:{
+            handleClick() {
+                emitter.emit('transmit',{
+                    msg:this.msg
+                })
+            }
+        },
+
+        template:' <div class="gg"> <h1 @click="handleClick">点我看看</h1> </div>'
+    })
+
+    vm.component('cdd',{
+        data() {
+            return {
+                msg:'',
+            }
+        },
+        mounted(){
+            let that = this
+            emitter.on('transmit',function (e) {
+                that.msg = e.msg
+            })
+        },
+        template:' <div class="cdd"> {{msg}} </div>'
+    })
+
+
+    vm.mount('#app')
+
+
+
+
+
+
+
+
+    // const vm = Vue.createApp({})
+    // // 2. 声明mitt()方法
+    // const emitter = mitt();
+    // vm.component('gg', {
+    //     data() {
+    //         return {
+    //             msg: '我是哥哥传来的值'
+    //         }
+    //     },
+    //     methods: {
+    //         // 3. 声明一个方法，在方法中使用emit方法定义要传送的值
+    //         handleClick() {
+    //             emitter.emit('foo', { msg: this.msg })
+    //         }
+    //     },
+    //     template: `<div class="gg" @click="handleClick"></div>`
+    // })
+    //
+    // vm.component('cdd', {
+    //     data() {
+    //         return {
+    //             msg: ''
+    //         }
+    //     },
+    //     // 4. 在弟弟组件中 使用生命周期函数 mounted() 这个时候DOM元素已经加载完毕 使用第三方插件
+    //     mounted() {
+    //         let that = this
+    //         // 5. 使用emitter中的on方法监听传来的值
+    //         emitter.on('foo', e => that.msg = e.msg)
+    //
+    //     },
+    //     template: `<div class="cdd">{{msg}}</div>`,
+    // })
+    // console.log('111')
+    //
+    // vm.mount('#app')
+
+
+    // const emitter = mitt();
+    // let vm = Vue.createApp({
+
+    // })
+
+
+    // vm.component('gg', {
+
+    //     data() {
+    //         return {
+    //             msg: ''
+    //         }
+    //     },
+    //     methods: {
+    //         // 哥哥要给弟弟传值
+    //         handleClick() {
+    //             emitter.emit('foo', { a: '我是点击后改变的值' })
+    //         }
+    //     },
+    //     mounted() {
+    //         let that = this;
+    //         emitter.on('foo1', function (e) {
+    //             console.log(e);
+    //             that.msg = e.b
+    //         })
+    //     },
+    //     template: `<div class="gg" @click="handleClick">{{msg}}</div>`
+    // })
+
+    // vm.component('cdd', {
+    //     data() {
+    //         return {
+    //             msg: ''
+    //         }
+    //     },
+    //     mounted() {
+    //         const that = this
+    //         emitter.on('foo', function (e) {
+    //             console.log(e);
+    //             that.msg = e.a
+    //         })
+    //     },
+    //     methods: {
+    //         handleClick1() {
+    //             emitter.emit('foo1', { b: '我是弟弟传给哥哥的值' })
+    //         }
+    //     },
+    //     template: `<div class="cdd" @click="handleClick1">{{msg}}</div>`
+    // })
+    // vm.mount('#app')
+</script>
+</body>
+
+</html>

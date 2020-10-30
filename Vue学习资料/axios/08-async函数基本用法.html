@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script type="text/javascript" src="./lib/axios.js"></script>
+  <script type="text/javascript">
+    /*
+      async/await 处理异步操作：
+      async函数返回一个Promise实例对象
+      await后面可以直接跟一个 Promise实例对象
+    */
+    // async function promise() {
+    //   let res = await axios.get('http://localhost:3000/axios-json')
+    //   console.log(res.data)
+    // }
+    //
+    // promise();
+
+
+    const asy = function(x, time) {
+      return new Promise((resolve, reject) =>{
+        setTimeout(()=>{
+          resolve(x)
+        }, time)
+      })
+    }
+
+    const add = async function() {
+      const a = await asy(3, 5000).then(function (res) {
+        console.log(res)
+      })
+      console.log(a)
+      const b =  await asy(4, 10000)
+      console.log(b)
+      const c =  await asy(5, 15000)
+      console.log(c)
+      console.log(a,b,c)
+      const d = a + b +c
+      console.log(d)
+    }
+
+    add();
+
+  </script>
+</body>
+
+</html>

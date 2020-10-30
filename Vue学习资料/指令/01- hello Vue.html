@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2.创建模板 -->
+    <div id="app">
+        <p v-html="msg"></p>
+    </div>
+    <!-- 1.引入Vue文件 -->
+    <!-- <script src="../lib/vue-3.0.js"></script> -->
+
+    <!-- 3.写入数据 -->
+    <!-- <script>
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    msg: 'hello Vue123324523123',
+                }
+            }
+        })
+        vm.mount('#app');
+    </script> -->
+    <!-- 4.写控制器 -->
+
+    <!-- 1. 引入Vue文件 -->
+    <script src="../lib/vue-3.0.js"></script>
+    <!-- 2. 写入数据 -->
+    <!-- <script>
+        let content = {
+            data() {
+                return {
+                    msg: '哈克就会瓦尔kjhSLUKEhrfuiserhgknjzdf'
+                }
+            }
+        }
+        Vue.createApp(content).mount('#app')
+    </script> -->
+    <!-- 3. 写控制器 -->
+
+    <!-- <script>
+        // 2.写入数据
+        let content = {
+            data() {
+                return {
+                    msg: 'asjdkhksjrhdgf jkzhsdf '
+                }
+            }
+        }
+        Vue.createApp(content).mount('#app')
+    </script> -->
+
+
+    <script>
+        let content = {
+            data() {
+                return {
+                    msg: '<p>我是一个p标签</p>'
+                }
+            }
+        }
+        Vue.createApp(content).mount('#app')
+    </script>
+
+</body>
+
+</html>

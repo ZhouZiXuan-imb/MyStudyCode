@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2.创建模板 -->
+    <div id="app">
+        <p v-html="msg" v-on:mousemove="onmousemove('周子轩')" v-on:click="onclick('朱凤娇')"></p>
+    </div>
+
+    <!-- 1. 引入Vue文件 -->
+    <script src="../lib/vue-3.0.js"></script>
+    <!-- 3. 写入数据 -->
+    <!-- <script>
+        let content = {
+            data() {
+                return {
+                    msg: 'jhsertgjhdfghushehruitjghzdfg',
+                    count: 1
+                }
+            },
+            methods: {
+                onclick: function (name) {
+                    this.count++
+                    alert(name + '点击了一次')
+                },
+            }
+        }
+        Vue.createApp(content).mount('#app')
+    </script> -->
+    <!-- 4. 写控制器 -->
+
+
+
+    <script>
+        let click = {
+            data() {
+                return {
+                    msg: '点击我试试'
+                }
+            },
+            methods: {
+                onmousemove(name) {
+                    console.log(name + '移入了我')
+                },
+                onclick(name) {
+                    console.log(name + '点击了我');
+                }
+            }
+        }
+        Vue.createApp(click).mount('#app')
+    </script>
+</body>
+
+</html>

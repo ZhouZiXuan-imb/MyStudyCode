@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+            width: 500px;
+            height: 500px;
+            border: 5px solid red;
+        }
+
+        .green {
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{msg}}
+        <content></content>
+    </div>
+    <div id="add">
+        {{msg}}
+    </div>
+
+    <script src="../组件/lib/vue-3.0.js"></script>
+    <script>
+        let vue = Vue.createApp({
+            data() {
+                return {
+                    msg: '我是vue组件'
+                }
+            }
+        })
+        vue.mount('#add')
+        // 根组件
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    msg: '我是跟组件'
+                }
+            }
+        })
+        // 注册一个全局组件  
+        // 全局组件可以在任何实例中使用
+        // 新注册的组件和跟组件的内容是一样的  有数据有方法有侦听器有计算属性
+        vm.component('content', {
+            data() {
+                return {
+                    msg: '我是新注册的组件'
+                }
+            },
+            methods: {
+                handleClick() {
+                    this.msg = '我是被点击后的新组件'
+                }
+            },
+            // 创建的新组建需要使用template属性写模板
+            template: `
+            <div @click="handleClick">{{msg}}</div>
+            `
+        })
+
+        vm.mount('#app')
+
+
+
+
+
+
+
+
+
+
+
+        // let vm = Vue.createApp({
+        //     data() {
+        //         return {
+        //             msg: '你好'
+        //         }
+        //     }
+        // })
+
+
+        // vm.component('hello-world', {
+        //     data() {
+        //         return {
+        //             data: '我不好'
+        //         }
+        //     },
+        //     methods: {
+        //         click() {
+        //             this.data = '我是被点之后的组件'
+        //         }
+        //     },
+        //     template: `
+        //     <div>
+        //         <div class="green" @click="click">{{data}}</div>
+        //     </div>`
+        // })
+        // vm.mount('#app')
+    </script>
+</body>
+
+</html>

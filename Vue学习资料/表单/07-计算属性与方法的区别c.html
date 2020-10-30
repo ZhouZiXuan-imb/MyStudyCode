@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="number" v-model.number="num1">
+    <span>+</span>
+    <input type="number" v-model.number="num2">
+    <span @click="sum">=</span>
+    <input type="number" disabled v-bind:value="result">
+  </div>
+  <!-- <script type="text/javascript" src="js/vue.js"></script> -->
+  <script src="./lib/vue-3.0.js"></script>
+  <script type="text/javascript">
+    /*
+      计算属性与方法的区别:计算属性是基于响应式依赖进行缓存的，而方法不缓存
+      计算属性可以每次取一个方法中获取到的值，因为值缓存下来了，但是方法每次执行完之后变量都会销毁，不会缓存，
+      每次调用函数都会执行一次方法中的代码，性能消耗大，计算属性消耗性能小。
+    */
+    const vm = Vue.createApp({
+      data() {
+        return {
+          num1: '',
+          num2: '',
+          result: ''
+        }
+      },
+      methods: {
+        sum() {
+          return this.result = this.num1 + this.num2
+        }
+      }
+      // computed: {
+      //   result: function () {
+      //     return this.num1 + this.num2;
+      //   }
+      // }
+    }).mount('#app')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const vm = Vue.createApp({
+    //   data() {
+    //     return {
+    //       num1: '',
+    //       num2: '',
+    //       result: ''
+    //     }
+    //   },
+    //   methods: {
+    //     result1: function () {
+    //       console.log(this.result);
+    //       this.result = this.num1 + this.num2
+    //       console.log(this.result);
+    //     }
+    //   },
+    //   computed: {
+    //     result: function () {
+    //       return this.num1 + this.num2
+    //     }
+    //   }
+    // }).mount('#app')
+  </script>
+</body>
+
+</html>

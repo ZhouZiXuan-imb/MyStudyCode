@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .grid {
+      margin: auto;
+      width: 530px;
+      text-align: center;
+    }
+
+    .grid table {
+      border-top: 1px solid #C2D89A;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .grid th,
+    td {
+      padding: 10;
+      border: 1px dashed orange;
+      height: 35px;
+      line-height: 35px;
+    }
+
+    .grid th {
+      background-color: orange;
+    }
+
+    .grid .book {
+      padding-bottom: 10px;
+      padding-top: 5px;
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="grid">
+      <div>
+        <h1>图书管理</h1>
+        <div class="book">
+          <div>
+            <label for="id">
+              编号：
+            </label>
+            <input type="text" id="id" v-model.trim="id" :disabled="flag">
+            <label for="name">
+              名称：
+            </label>
+            <input type="text" id="name" v-model.trim="name">
+            <button @click="handleAdd">提交</button>
+          </div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>时间</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item,index) in data">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.date}}</td>
+            <td>
+              <a href="" @click.prevent="handleUpdate(item.id)">修改</a>
+              <span>|</span>
+              <a href="">删除</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./lib/vue-3.0.js"></script>
+  <script>
+    // 0. 刚进入页面的时候 给localstorage中添加数据  如果没有数据  就添加一个空数组
+    // 1. 点击添加按钮获取到编号和名称输入框中的值
+    // 2. 新建一个对象把获取到的值放在对象中
+    // 3. 把新对象添加到localstorage中
+
+    let vm = Vue.createApp({
+      data() {
+        return {
+          id: '',
+          name: '',
+          date: '',
+          data: '',
+          flag: false
+        }
+      },
+      created() {
+        this.data = JSON.parse(localStorage.getItem('books') || '[]')
+      },
+      methods: {
+        // 添加
+        handleAdd() {
+          if (this.flag) {
+            let that = this
+            let index = this.data.findIndex(function (item) {
+              return item.id == that.id
+            })
+            this.data[index].name = this.name
+            this.id = '';
+            this.name = ''
+          } else {
+            if (this.name == '') {
+              alert('书名不能为空')
+            } else {
+              this.data.push({
+                id: new Date().valueOf(),
+                name: this.name,
+                date: new Date().toLocaleDateString()
+              })
+            }
+
+            this.name = ''
+            this.id = ''
+          }
+        },
+        // 修改
+        handleUpdate(id) {
+          let arr = this.data.filter(item => item.id == id)
+          this.id = arr[0].id
+          this.name = arr[0].name
+          this.flag = true
+        },
+      },
+
+      updated() {
+        localStorage.setItem('books', JSON.stringify(this.data))
+      }
+    }).mount('#app')
+  </script>
+</body>
+
+</html>

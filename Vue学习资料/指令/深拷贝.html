@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 浅拷贝
+        // let oldObj = {
+        //     name: '周子轩',
+        //     age: 19,
+        //     say: function () {
+        //         console.log('hi');
+        //     }
+        // }
+
+        // let newObj = {};
+
+        // for (let k in oldObj) {
+        //     newObj[k] = oldObj[k]
+        // }
+        // console.log(newObj);
+
+
+        // 深拷贝
+        let oldObj = {
+            name: '周子轩',
+            age: 19,
+            say: function () {
+                console.log('hi');
+            }
+        }
+        let newObj = {};
+        function copy(newObj, oldObj) {
+            for (let k in oldObj) {
+                let item = oldObj[k]
+                if (oldObj[k] instanceof Array) {
+                    newObj[k] = [];
+                    copy(newObj[k], item)
+                } else if (oldObj[k] instanceof Object) {
+                    newObj[k] = {};
+                    copy(newObj[k], item)
+                } else {
+                    newObj[k] = item;
+                }
+            }
+        }
+        copy(newObj, oldObj)
+        console.log(newObj);
+    </script>
+</body>
+
+</html>

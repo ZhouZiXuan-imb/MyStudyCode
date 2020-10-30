@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:MongoDB" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:MongoDB" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:5.26" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:MongoDB" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:5.26" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:code" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:MongoDB" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:5.28" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:MongoDB" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:5.28" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:managerSystem" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:MongoDB" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:5.30" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:MongoDB" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:5.30" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:managerSystem-2" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20977f70-1778-4260-8d02-844d81e74130" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Vuex.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-actions/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-getters/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-mutations/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuex-simple/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/adminBootom.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/adminHeader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/adminLeft.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/adminRight.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/dingdan.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/quanxian.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/shangpin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/users.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/components/xitong.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vue-router-demo01/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vuerouter-children/src/components/EWM.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vuerouter-children/src/components/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vuerouter-children/src/components/UnameAndPwd.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vuerouter-children/src/components/User.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vuerouter-children/src/routers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vur-router-parems/src/assets/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vur-router-parems/src/components/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vur-router-parems/src/components/about.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vur-router-parems/src/components/router-parems.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../路由/vur-router-parems/src/routers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../路由/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../路由/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../路由/vue-router-simple/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../路由/vue-router-simple/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../路由/vue-router-simple/src/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../路由/vue-router-simple/src/routers/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1jSoLje3McnMXCiVPgy04M7xNp2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="新增" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20977f70-1778-4260-8d02-844d81e74130" name="默认的" comment="" />
+      <created>1603806801028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603806801028</updated>
+      <workItem from="1603806802717" duration="1658000" />
+      <workItem from="1603844291225" duration="6746000" />
+      <workItem from="1603940349237" duration="1784000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603807353152">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1603807353152" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1603849934275">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1603849934275" />
+  </component>
+</project>
