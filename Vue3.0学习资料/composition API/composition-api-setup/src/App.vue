@@ -1,20 +1,30 @@
 <template>
   <!--  <vSetup msg="周子轩"></vSetup>-->
   <!--  <vRef></vRef>-->
-  <vReactive></vReactive>
+  <!--  <vReactive></vReactive>-->
+  <!--  <vComputed></vComputed>-->
+  <!--  <vReadonly></vReadonly>-->
+  <vWatchEffect></vWatchEffect>
 </template>
+
 
 <script>
 // import vSetup from "@/components/vSetup";
 // import vRef from "@/components/vRef";
-import vReactive from "@/components/vReactive";
+// import vReactive from "@/components/vReactive";
+// import vComputed from "@/components/vComputed";
+// import vReadonly from "@/components/vReadonly";
+import vWatchEffect from "@/components/vWatchEffect";
 
 export default {
   name: "App",
   components: {
     // vSetup,
     // vRef,
-    vReactive
+    // vReactive,
+    // vComputed,
+    // vReadonly,
+    vWatchEffect
   }
 };
 </script>

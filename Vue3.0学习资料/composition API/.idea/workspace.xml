@@ -20,26 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77705de0-e72e-4cc2-a580-f90f89b110de" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/composition API.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vReactive.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vRef.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vSetup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/components/Home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/components/Home/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/components/Item/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/components/Item/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/components/Score/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/components/Score/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer-completion/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/components/Item/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/components/Item/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/components/score/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/components/score/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Vue案例/happy-answer/happy-answer2/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vComputed.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vReadonly.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vWatch.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vWatchEffect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composition-api-setup/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/composition-api-setup/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composition-api-setup/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/composition-api-setup/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composition-api-setup/src/components/vRef.vue" beforeDir="false" afterPath="$PROJECT_DIR$/composition-api-setup/src/components/vRef.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +62,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,6 +74,12 @@
       <option name="presentableId" value="Default" />
       <updated>1604564046718</updated>
       <workItem from="1604564048470" duration="5407000" />
+      <workItem from="1604631537290" duration="2957000" />
+      <workItem from="1604643745735" duration="5801000" />
+      <workItem from="1604657819904" duration="781000" />
+      <workItem from="1604659140422" duration="16000" />
+      <workItem from="1604659214624" duration="198000" />
+      <workItem from="1604659420346" duration="824000" />
     </task>
     <servers />
   </component>
@@ -101,6 +96,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604564211411">
@@ -123,5 +119,13 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1604586704715" />
+    <state x="1998" y="145" key="SettingsEditor" timestamp="1604659458547">
+      <screen x="1920" y="0" width="1152" height="2018" />
+    </state>
+    <state x="1998" y="145" key="SettingsEditor/0.0.1920.1050/1920.0.1152.2018@1920.0.1152.2018" timestamp="1604659458547" />
+    <state x="2261" y="244" key="run.anything.popup" timestamp="1604632364660">
+      <screen x="1920" y="0" width="1152" height="2018" />
+    </state>
+    <state x="2261" y="244" key="run.anything.popup/0.0.1920.1050/1920.0.1152.2018@1920.0.1152.2018" timestamp="1604632364660" />
   </component>
 </project>
