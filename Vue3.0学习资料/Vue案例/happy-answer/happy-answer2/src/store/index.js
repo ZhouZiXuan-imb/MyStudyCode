@@ -20,8 +20,8 @@ export default createStore({
         remberAnswer(state, payload) {
             console.log(state, payload)
         },
-        addItemNum(state) {
-            state.itemNum++
+        addItemNum(state,num) {
+            state.itemNum += num
         },
         answeridPush(state, payload) {
             state.answerid.push(payload)
@@ -34,8 +34,11 @@ export default createStore({
             context.commit('getData', res)
         },
         addNum(context, payload) {
-            context.commit('addItemNum', payload)
             context.commit('answeridPush', payload)
+            // 如果itemNum小于题目的数量那么调用addItemNum
+            if (context.state.itemNum < context.state.questions.length) {
+                context.commit("addItemNum", 1);
+            }
         }
     },
     modules: {}

@@ -1,4 +1,5 @@
 <template>
+
   <section>
     <!-- 头部标签 -->
     <header class="top_tips">
@@ -22,7 +23,7 @@
     </div>
   </section>
   <span class="next_item button_style" @click="nextItem" v-if="itemNum < 5"></span>
-  <span class="submit_item button_style" @click="changeHash" v-else></span>
+  <span class="submit_item button_style" @click="grade" v-else></span>
 </template>
 
 <script>
@@ -48,26 +49,24 @@ export default {
     },
     // 下一题功能
     nextItem() {
-      if(this.chooseNum != null) {
+      if (this.chooseNum != null) {
         this.chooseNum = null;
         // 把选择的答案id传给addNum方法
-        this.$store.dispatch('addNum',this.chooseId)
+        this.$store.dispatch('addNum', this.chooseId)
       } else {
         alert('您还没有选择答案哦')
       }
     },
     grade() {
-      if(this.chooseNum != null) {
+      if (this.chooseNum != null) {
         this.chooseNum = null;
         // 把选择的答案id传给addNum方法
-        this.$store.commit('grade')
+        this.$store.dispatch('addNum', this.chooseId)
+        this.$router.push('/score')
       } else {
         alert('您还没有选择答案哦')
       }
     },
-    changeHash() {
-      this.$router.push('/score')
-    }
   },
   computed: {
     ...mapState(['itemNum', 'questions']),

@@ -15,17 +15,11 @@
 </template>
 
 <script>
-import {mapState,mapActions} from 'vuex'
+import {mapState} from 'vuex'
 export default {
   name: "index",
   computed:{
     ...mapState(['level'])
-  },
-  methods:{
-    ...mapActions(['getData'])
-  },
-  created() {
-    this.getData();
   }
 }
 </script>
