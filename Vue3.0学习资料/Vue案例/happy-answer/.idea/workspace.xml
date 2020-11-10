@@ -20,26 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95f1a584-7e26-4c66-ae87-cc7edac173bf" name="默认的" comment="happpy-answer项目">
-      <change afterPath="$PROJECT_DIR$/../../composition API/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../composition API/.idea/composition API.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../composition API/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../composition API/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../composition API/composition-api-setup/src/components/vReactive.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../composition API/composition-api-setup/src/components/vRef.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../composition API/composition-api-setup/src/components/vSetup.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer-completion/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer-completion/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer-completion/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer-completion/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer-completion/src/components/Home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer-completion/src/components/Home/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer-completion/src/components/Item/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer-completion/src/components/Item/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer-completion/src/components/Score/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer-completion/src/components/Score/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer-completion/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer-completion/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer2/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer2/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer2/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer2/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer2/src/components/Item/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer2/src/components/Item/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer2/src/components/score/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer2/src/components/score/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/happy-answer2/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/happy-answer2/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +82,7 @@
       <workItem from="1604363060478" duration="29675000" />
       <workItem from="1604449137325" duration="9903000" />
       <workItem from="1604622130730" duration="41000" />
+      <workItem from="1604884786282" duration="666000" />
     </task>
     <task id="LOCAL-00001" summary="happpy-answer项目">
       <created>1604413251011</created>

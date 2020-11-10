@@ -3,14 +3,19 @@
     <!-- 输入框及搜索按钮 -->
     <div class="todo-header">
       <!-- 输入框-->
-      <input type="text" placeholder="请输入任务" v-model="info"/>
+      <input type="text" placeholder="请输入任务" v-model="info" />
       <!-- 按钮 -->
       <button @click="handleAdd">添加事项</button>
     </div>
     <!-- 列表 -->
     <ul class="todo-main">
       <li v-for="(item, index) in filterView" :key="item.id" :index="index">
-        <input type="checkbox" :checked="item.done" @change="updateDone(item.id,$event)"/> <span>{{ item.info }}</span>
+        <input
+          type="checkbox"
+          :checked="item.done"
+          @change="updateDone(item.id, $event)"
+        />
+        <span>{{ item.info }}</span>
         <a href="" @click.prevent="handleRemove(item.id)">删除</a>
       </li>
       <!--      <li>-->
@@ -26,9 +31,24 @@
     <div class="todo-footer">
       <p>{{ num }}条剩余</p>
       <div class="todo-footer-button">
-        <button @click="changeTask('all')" :class="viewKey == 'all'?'primary':'' ">全&nbsp;&nbsp;部</button>
-        <button @click="changeTask('undone')" :class="viewKey == 'undone'?'primary':'' ">未完成</button>
-        <button @click="changeTask('done')" :class="viewKey == 'done'?'primary':'' ">已完成</button>
+        <button
+          @click="changeTask('all')"
+          :class="viewKey == 'all' ? 'primary' : ''"
+        >
+          全&nbsp;&nbsp;部
+        </button>
+        <button
+          @click="changeTask('undone')"
+          :class="viewKey == 'undone' ? 'primary' : ''"
+        >
+          未完成
+        </button>
+        <button
+          @click="changeTask('done')"
+          :class="viewKey == 'done' ? 'primary' : ''"
+        >
+          已完成
+        </button>
       </div>
       <a href="" @click.prevent="removeAccomplish">清除已完成</a>
     </div>
@@ -36,14 +56,13 @@
 </template>
 
 <script>
-import {mapState, mapMutations, mapGetters} from "vuex";
+import { mapState, mapMutations, mapGetters } from "vuex";
 
 export default {
   name: "App",
   data() {
     return {
-      info: "",
-
+      info: ""
     };
   },
   created() {
@@ -51,9 +70,12 @@ export default {
   },
   methods: {
     // 删除功能   // 删除已完成功能   // 切换选项卡功能
-    ...mapMutations(["handleRemove", 'removeAccomplish','changeTask']),
+    ...mapMutations(["handleRemove", "removeAccomplish", "changeTask"]),
     // 添加功能
     handleAdd() {
+      //#region
+      //#endregion
+
       if (!this.info.trim()) {
         alert("请输入任务");
       } else {
@@ -67,14 +89,13 @@ export default {
       let params = {
         id: id,
         checked: event.target.checked
-      }
-      this.$store.commit('updateDone', params);
-    },
-
+      };
+      this.$store.commit("updateDone", params);
+    }
   },
   computed: {
-    ...mapState(["list",'viewKey']),
-    ...mapGetters(["num",'filterView'])
+    ...mapState(["list", "viewKey"]),
+    ...mapGetters(["num", "filterView"])
   }
 };
 </script>
