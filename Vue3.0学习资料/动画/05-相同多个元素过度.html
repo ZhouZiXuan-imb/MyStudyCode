@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .v-enter-from,
+        .v-leave-to {
+            transition: all .5s;
+            opacity: 0;
+        }
+
+        .v-enter-to,
+        .v-leave-from {
+            transition: all 1s;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click='handleToggle'>点击查看效果</button>
+        <hr>
+        <transition>
+            <button v-if='flag'>保存</button>
+            <button v-else>取消</button>
+        </transition>
+    </div>
+
+    <script src="./lib/vue-3.0.js"></script>
+    <script>
+        let app = Vue.createApp({
+            data() {
+                return {
+                    flag: true,
+                }
+            },
+            methods: {
+                handleToggle() {
+                    this.flag = !this.flag
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
