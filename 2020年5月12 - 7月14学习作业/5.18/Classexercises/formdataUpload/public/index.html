@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- formData 提供的元素内置对象 和XMLHttpRequest 和 Date()  和 Math  和Array对象 -->
+  <!-- 方便我们进行表单的序列化 -->
+  <!-- set() -->
+  <!-- get() -->
+  <!-- append() -->
+  <!-- <form>
+    <input type="text" name="username" placeholder="请输入用户名">
+    <input type="password" name="password" placeholder="请输入密码">
+
+    <input type="button" value="按钮">
+  </form>
+  <script>
+    document.querySelector('input[type="button"]').onclick = function () {
+
+      // $('form').serialize();
+      // 1.实例化formdata
+      let formdata = new FormData(document.querySelector('form'));
+
+      // console.log(formdata.get('username'))
+      // console.log(formdata.get('password'));
+      // formdata.append("键","值")
+      // formdata.append('email', 'q3423@qq.com');
+
+      // console.log(formdata.get('email'));
+    } -->
+  <!-- </script> -->
+  <!-- 把图片 和 数据发送给服务器 -->
+  <form>
+    <!-- 1.用户名 -->
+    <input type="text" name="username" placeholder="请输入用户名">
+    <!-- 2.密码 -->
+    <input type="password" name="password" placeholder="请输入密码">
+    <!-- 3.头像 -->
+    <input type="file" name="avatar" id="">
+  </form>
+
+  <button>按钮</button>
+  <script src="./lib/jquery.min.js"></script>
+  <script>
+    $('button').on('click', function () {
+      // 使用原生的序列化方法 序列化表单
+      let formdata = new FormData(document.querySelector('form'));
+
+      $.ajax({
+        type: 'post',
+        url: '/profile',
+        data: formdata,
+        // 注意: 有两个地方注意
+        // {} => key=value&key=value 不要转成key=value&key=value
+        processData: false,
+        // 不要让jquery自动添加content-type
+        contentType: false,
+        success: function (data) {
+          console.log(data);
+        }
+      })
+    })
+  </script>
+
+
+</body>
+
+</html>

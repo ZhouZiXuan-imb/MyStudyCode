@@ -1,0 +1,21 @@
+const express = require('express')
+const app = express();
+const path = require('path')
+// 设置模板引擎
+// 在应用中使用art-template模板引擎  后缀是art
+app.engine('html', require('express-art-template'))
+// 设置模板引擎，模板的存放目录名字叫views
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'html')
+
+
+app.get('/index', (req, res) => {
+	let title = '首页'
+	let str = ['周', '子', '轩', '啊', '啊', '啊']
+	res.render('index', {
+		title: title,
+		list: str
+	})
+})
+
+app.listen(80)

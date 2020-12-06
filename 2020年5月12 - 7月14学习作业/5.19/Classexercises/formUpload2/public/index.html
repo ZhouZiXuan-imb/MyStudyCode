@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <!-- 1. 用户名 -->
+    <input type="text" name="username" placeholder="请输入用户名">
+    <!-- 2. 密码 -->
+    <input type="password" name="password" placeholder="请输入密码">
+    <!-- 3. 头像 -->
+    <input type="file" name="avatar">
+    <!-- 4. 按钮 -->
+    <input type="button" value="按钮">
+  </form>
+
+
+  <script src="./libs/jquery-1.12.4.min.js"></script>
+  <script>
+
+    $('input[type="button"]').on('click', function (e) {
+      e.preventDefault()
+      let formdata = new FormData(document.querySelector('form'))
+
+
+      $.ajax({
+        type: 'POST',
+        url: '/getData',
+        data: formdata,
+        // 让传送的数据不要进行转换  不要转换成key=value的形式  因为formdata已经转换过了
+        processData: false,
+        // 因为ajax会自动识别file按钮  自动给file按钮添加content-type  我们不需要  所以设置false
+        contentType: false,
+        success: function (data) {
+          console.log(data)
+        }
+      })
+    })
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="username">
+    <input type="password" name="password">
+
+    <button>按钮</button>
+    <div class="box"></div>
+
+    <script>
+        let userInput = document.querySelector('input[name="username"]')
+        let passInput = document.querySelector('input[name="password"]')
+        let box = document.querySelector('.box')
+
+        let btn = document.querySelector('button')
+
+
+        btn.onclick = () => {
+            let username = userInput.value
+            let password = passInput.value
+            console.log(username, password)
+            // 1.实例化
+            let xhr = new XMLHttpRequest()
+            // 2.发送请求的方式和地址
+            xhr.open('GET', `/request?username=${username}&password=${password}`)
+            xhr.send();
+            xhr.onreadystatechange = () => {
+                // console.log(typeof xhr.responseText)
+                let data = JSON.parse(xhr.responseText)
+                document.body.innerHTML = `我是${data.username},我的密码是${data.password}`
+            }
+        }
+    </script>
+</body>
+
+</html>

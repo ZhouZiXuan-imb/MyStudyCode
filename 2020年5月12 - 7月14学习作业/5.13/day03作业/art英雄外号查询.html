@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+        .name {
+            color: #8a2602;
+        }
+
+        .title {
+            color: #8a2602;
+        }
+
+        .search_title {
+            display: block;
+            margin: 80px auto 0;
+        }
+
+        .search_wrap {
+            width: 600px;
+            height: 40px;
+            margin: 30px auto 0;
+            background-color: #ff0;
+        }
+
+        .hero {
+            width: 498px;
+            height: 38px;
+            border: 1px solid #6e4242;
+            padding: 0px;
+            text-indent: 10px;
+            outline: none;
+            float: left;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .search {
+            width: 100px;
+            height: 40px;
+            border: 0px;
+            float: left;
+            font-size: 18px;
+            background-color: #8a2602;
+            color: #fff;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .yangpi {
+            width: 411px;
+            height: 197px;
+            margin: 47px auto 0;
+            background: url('images/yangpi_bg.png') no-repeat;
+            position: relative;
+
+        }
+
+        .wrap {
+            width: 240px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            top: 60px;
+            font-size: 18px;
+            color: #8a2602;
+            line-height: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/search_title.png" alt="" class="search_title">
+
+    <div class="search_wrap">
+        <input type="text" placeholder="请输入查询的名字" class="hero" />
+        <input type="button" value="英雄查询" class="search" />
+    </div>
+    <h2 class="yangpi">
+        <div class="wrap">
+            英雄名称：<span class="name"></span><br>
+            英雄外号：<span class="title"></span>
+        </div>
+    </h2>
+
+    <script src="./libs/jquery-1.12.4.min.js"></script>
+    <script src="./artTemplate语法/art-template-4.13.2/template-web.js"></script>
+    <script type="text/template" id="str_template">
+    {{content}}
+  </script>
+    <script>
+
+
+        $('.search').on('click', function () {
+
+
+            // 实例化xhr对象
+
+            $.ajax({
+                type: 'GET',
+                url: 'https://autumnfish.cn/api/hero/simple',
+                data: {
+                    name: `${$('.hero').val()}`
+                },
+                success: function (data) {
+                    // $('.name').html(`${$('.hero').val()}`)
+                    // $('.title').html(data)
+                    let htmlStr = template('str_template', {
+                        content: $('.hero').val(),
+                    })
+                    console.log(data)
+                    $('.name').html(htmlStr)
+                    $('.title').html(data)
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

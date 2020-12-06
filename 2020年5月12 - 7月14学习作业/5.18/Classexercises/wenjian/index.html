@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="file">
+    </form>
+
+    <img src="" alt="">
+
+    <script>
+        let oInput = document.querySelector('input')
+        let oImg = document.querySelector('img')
+
+
+        oInput.onchange = function () {
+
+            let imgUrl = URL.createObjectURL(oInput.files[0])
+
+            console.log(imgUrl)
+
+            oImg.src = imgUrl
+        }
+    </script>
+</body>
+
+</html>
