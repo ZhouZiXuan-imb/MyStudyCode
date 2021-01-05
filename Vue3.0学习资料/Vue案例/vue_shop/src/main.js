@@ -32,7 +32,7 @@ Vue.component('tree-table', TreeTable)
 // 将富文本编辑器，注册为全局可用的组件
 Vue.use(VueQuillEditor)
 
-Vue.filter('dateFormat', function (originVal) {
+Vue.filter('dateFormat', function(originVal) {
   const dt = new Date(originVal)
 
   const y = dt.getFullYear()

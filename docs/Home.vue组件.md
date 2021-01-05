@@ -625,7 +625,7 @@ import Crumbs from "@/components/Crumbs";
 
 2.  接收面包屑的文本和路由数据
 
-- 使用面包屑组件的时候父组件会传来值
+- 使用面包屑组件的时候会父组件会传来值
 
 ```js
 export default {
@@ -845,7 +845,6 @@ export const useGetStatistics = () => {
         // 索引自增
         i++;
       }
-      // console.log(numArr.reverse().join(""));
       // 返回处理后的数据
       return numArr.reverse().join("");
     }
@@ -1412,4 +1411,3 @@ const { ctx } = getCurrentInstance();
      overflow: hidden;
    }
    ```
-

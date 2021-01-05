@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- head标签中的所有 -->
+<%- include('common/head') %>
+
+<body>
+  <script>NProgress.start()</script>
+
+  <div class="main">
+    <!-- 主要区域头部 -->
+    <%- include('common/navbar') %>
+    <div class="container-fluid">
+      <div class="page-title">
+        <h1>编辑文章</h1>
+      </div>
+      <!-- 有错误信息时展示 -->
+      <!-- <div class="alert alert-danger">
+        <strong>错误！</strong>发生XXX错误
+      </div> -->
+      <form class="row" id="editPostForm">
+        <input type="hidden" name="id" value="<%- data[0].id%>">
+        <div class="col-md-9">
+          <div class="form-group">
+            <label for="title">文章标题</label>
+            <input id="title" class="form-control input-lg" name="title" type="text" placeholder="文章标题"
+              value="<%- data[0].title %>">
+          </div>
+          <div class="form-group">
+            <label for="content">文章内容</label>
+            <textarea id="content" class="form-control input-lg" name="content" cols="30" rows="10"
+              placeholder="内容"><%- data[0].content %></textarea>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="slug">别名</label>
+            <input id="slug" class="form-control" name="slug" type="text" placeholder="slug"
+              value="<%- data[0].slug %>">
+            <p class="help-block">https://zce.me/post/<strong><%- data[0].slug %></strong></p>
+          </div>
+          <div class="form-group">
+            <label for="feature">特色图像</label>
+            <!-- show when image chose -->
+            <% if (data[0].feature) {%>
+            <img src="<%- data[0].feature %>" class="help-block thumbnail">
+            <%}%>
+
+            <input id="feature" class="form-control" name="feature" type="file">
+          </div>
+          <div class="form-group">
+            <label for="category">所属分类</label>
+            <select id="category" class="form-control" name="category">
+            <% for (let i = 0; i <category.length; i++ ){ %>
+            <option value="<%- category[i].cate_id%>" <%- category[i].cate_id == data[0].category_id ? 'selected':'' %>>
+              <%- category[i].cate_name%></option>
+            <% } %>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="created">发布时间</label>
+            <input id="created" class="form-control" name="created" type="date" value="2020-07-20">
+          </div>
+          <div class="form-group">
+            <label for="status">状态</label>
+            <select id="status" class="form-control" name="status">
+              <% for (let j = 0; j  <statusArr.length; j++ ){ %>
+              <option value="<%- statusArr[j].status %>" <%- statusArr[j].status==data[0].status?"selected":""  %>>
+                <% if (statusArr[j].status == 'published'){%>
+                已发布
+                <% } else if(statusArr[j].status == 'drafted') {%>
+                草稿
+                <% } else {%>
+                回收站
+                <% }%>
+              </option>
+              <% } %>
+            </select>
+          </div>
+          <div class="form-group">
+            <input class="btn btn-primary" type="submit" id="editPostBtn" value="保存">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 侧边栏 -->
+  <%- include('common/aside') %>
+  <!-- 底部 -->
+  <%- include('common/footer') %>
+
+  <script src="/js/adminEditPosts.js"></script>
+</body>
+
+</html>
