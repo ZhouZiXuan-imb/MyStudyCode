@@ -1,0 +1,396 @@
+/**index.wxss**/
+.container_content {
+  width: 702rpx;
+}
+
+/* 我的金额 start */
+.my_balance {
+  display: flex;
+  align-items: center;
+  height: 178rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+}
+
+.my_balance_left {
+  display: flex;
+  align-items: center;
+}
+
+.my_balance_right {
+  position: relative;
+  margin-left: auto;
+  text-align: center;
+  padding-right: 15px;
+}
+
+.my_avatar {
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 50px;
+  margin-right: 25rpx;
+}
+
+.my_username {
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+
+.yen {
+  font-size: 20rpx;
+}
+
+.money {
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+
+.money_text {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.right_icon {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  color: #999;
+  width: 20rpx;
+  height: 20rpx;
+  border-right: 1px solid #999;
+  border-top: 1px solid #999;
+  transform: rotate(45deg);
+}
+
+/* 我的金额 end */
+
+/* 今日收益 start */
+.today_earnings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 178rpx;
+  width: 100%;
+  background-color: #f4c11d;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+  margin-top: 24rpx;
+  text-align: center;
+}
+
+.today_money {
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+
+.today_money_text {
+  font-size: 24rpx;
+}
+
+.today_order {
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+
+.today_order_text {
+  font-size: 24rpx;
+}
+
+.today_client {
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+
+.today_client_text {
+  font-size: 24rpx;
+}
+
+/* 今日收益 end */
+
+/* 今日累计销量 start */
+.today_count {
+  width: 100%;
+  background-color: #fff;
+  padding: 32rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+  margin-top: 24rpx;
+}
+
+.today_count_title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.today_count_title_count {
+  font-size: 34rpx;
+  font-weight: bolder;
+  margin-right: 42rpx;
+}
+
+.today_count_title_today {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.today_count_title_left {
+  display: flex;
+  align-items: center;
+}
+
+.today_count_content_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+
+.today_count_title_right {
+  margin-left: auto;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.today_count_content_items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.today_count_content_items_content {
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68rpx;
+  height: 68rpx;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+
+.t_items_sales {
+  display: flex;
+  align-items: center;
+}
+
+.t_items_sales_blue {
+  width: 296rpx;
+  height: 16rpx;
+  background-color: #7497f6;
+  margin-right: 18rpx;
+}
+
+.t_items_sales_yellow {
+  width: 138rpx;
+  height: 16rpx;
+  background-color: #fad673;
+  margin-right: 18rpx;
+}
+
+.t_items_title {
+  margin-bottom: 10rpx;
+}
+
+/* 销量top底部 */
+.today_count_content_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.today_count_content_footer_left,
+.today_count_content_footer_right {
+  display: flex;
+  align-items: center;
+}
+
+.t_footer_order,
+.t_footer_account {
+  display: flex;
+  align-items: center;
+  margin-right: 18rpx;
+}
+
+.t_footer_order_icon,
+.t_footer_account_icon {
+  width: 16rpx;
+  height: 16rpx;
+  margin-right: 18rpx;
+}
+
+.t_footer_order_icon {
+  background-color: #7497f6;
+}
+
+.t_footer_account_icon {
+  background-color: #fad673;
+}
+
+.t_footer_order_text,
+.t_footer_account_text {
+  font-size: 22rpx;
+  color: #8c8c8c;
+}
+
+.pagenum {
+  height: 6rpx;
+  width: 28rpx;
+  background-color: #dddddd;
+  margin-right: 8rpx;
+  border-radius: 1px;
+}
+
+.current {
+  background-color: #efb600;
+}
+
+/* 今日累计销量 end */
+
+/* 收款记账 start */
+
+.gathering {
+  display: flex;
+  border-radius: 15rpx;
+  width: 100%;
+  margin-top: 24rpx;
+}
+
+.many-people-gathering,
+.tally {
+  display: flex;
+  align-items: center;
+  width: 342rpx;
+  height: 128rpx;
+  padding: 0 24rpx;
+  background-color: #fff;
+  margin-right: 18rpx;
+  border-radius: 15rpx;
+  justify-content: space-between;
+}
+
+.many-people-gathering_left {
+  display: flex;
+  align-items: center;
+}
+
+.tally {
+  margin-right: 0rpx;
+}
+
+.many-people-gathering_icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 22rpx;
+}
+
+.many-people-gathering_text {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.many-people-gathering_right_icon {
+  width: 20rpx;
+  height: 20rpx;
+  border-right: 1px solid #999;
+  border-top: 1px solid #999;
+  transform: rotate(45deg);
+}
+
+/* 收款记账 start */
+
+/* 代发货活动 start */
+.await-shipments {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+}
+
+.await-shipments_title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34rpx;
+}
+
+.await-shipments_title_left {
+  position: relative;
+  font-size: 34rpx;
+  font-weight: bolder;
+}
+
+.await-shipments_title_icon {
+  position: absolute;
+  left: 0;
+  bottom: 0rpx;
+  width: 68rpx;
+  height: 10rpx;
+  opacity: 0.8;
+  background-color: #f4e3ac;
+}
+
+.await-shipments_title_right {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.await-shipments-commodity {
+  width: 100%;
+  padding: 34rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+
+.await-shipments-commodity_status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36rpx;
+}
+
+.a_status_left {
+  font-size: 23rpx;
+  color: #999999;
+}
+
+.propelNum {
+  color: #efb600;
+}
+
+.a_status_right {
+  font-size: 28rpx;
+  color: #efb600;
+}
+
+.await-shipments-commodity_title {
+  font-size: 26rpx;
+  margin-bottom: 45rpx;
+}
+
+.await-shipments-commodity_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.a_money {
+  font-size: 26rpx;
+}
+
+.a_order {
+  font-size: 23rpx;
+}
+
+.a_order_sell_num {
+  color: #000;
+}
+
+/* 代发货活动 end */

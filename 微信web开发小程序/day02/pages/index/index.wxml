@@ -1,0 +1,145 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="container_content">
+    <!-- 我的可提现金额 start -->
+    <view class="my_balance">
+      <view class="my_balance_left">
+        <image class="my_avatar" src="/images/user_avatar.jpg"></image>
+        <text class="my_username">赚钱小祝福</text>
+      </view>
+      <view class="my_balance_right">
+        <text class="money"><text class="yen">￥</text>{{money}}</text>
+        <view class="money_text">可提现金额</view>
+        <view decode class="right_icon"></view>
+      </view>
+    </view>
+    <!-- 我的可提现金额 end -->
+
+
+    <!-- 今日营收 start -->
+    <view class="today_earnings">
+      <view class="today_earnings_left">
+        <text class="today_money"><text class="yen">￥</text>{{money}}</text>
+        <view class="today_money_text">今日营收</view>
+      </view>
+      <view class="today_earnings_center">
+        <text class="today_order">12</text>
+        <view class="today_order_text">订单</view>
+      </view>
+      <view class="today_earnings_right">
+        <text class="today_client">12</text>
+        <view class="today_client_text">顾客</view>
+      </view>
+    </view>
+    <!-- 今日营收 end -->
+
+    <!-- 累计 start -->
+    <view class="today_count">
+      <view class="today_count_title">
+        <view class="today_count_title_left">
+          <text class="today_count_title_count">累计</text>
+          <text class="today_count_title_today">今日</text>
+        </view>
+        <text class="today_count_title_right">单位:件</text>
+      </view>
+      <view class="today_count_content">
+        <view class="today_count_content_title">
+          销量TOP
+        </view>
+        <!-- 销量数据 start -->
+        <view class="today_count_content_items" wx:for="{{TopSales}}" wx:for-index="index" wx:for-item="item"
+          wx:key="id">
+          <view class="rank">{{index+1}}</view>
+          <view class="today_count_content_items_content">
+            <view class="t_items_title">{{item.title}}</view>
+            <view class="t_items_sales">
+              <view class="t_items_sales_blue"></view>
+              <text class="t_items_sales_blue_text">{{item.blueText}}</text>
+            </view>
+            <view class="t_items_sales">
+              <view class="t_items_sales_yellow"></view>
+              <text class="t_items_sales_blue_text">{{item.yellowText}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="today_count_content_footer">
+          <view class="today_count_content_footer_left">
+            <view class="t_footer_order">
+              <view class="t_footer_order_icon"></view>
+              <text class="t_footer_order_text">订单</text>
+            </view>
+            <view class="t_footer_account">
+              <view class="t_footer_account_icon"></view>
+              <text class="t_footer_account_text">记账</text>
+            </view>
+          </view>
+          <view class="today_count_content_footer_right">
+            <view class="pagenum current"></view>
+            <view class="pagenum"></view>
+          </view>
+
+        </view>
+        <!-- 销量数据 end -->
+
+      </view>
+    </view>
+    <!-- 累计 end -->
+
+    <!-- 多人收款 记账 start -->
+    <view class="gathering">
+      <view class="many-people-gathering">
+        <view class="many-people-gathering_left">
+          <image class="many-people-gathering_icon" src="/images/many-people-gathering.png"></image>
+          <text class="many-people-gathering_text">多人收款</text>
+        </view>
+        <view class="many-people-gathering_right_icon"></view>
+      </view>
+      <view class="tally">
+        <view class="many-people-gathering_left">
+          <image class="many-people-gathering_icon" src="/images/tally.png"></image>
+          <text class="many-people-gathering_text">记账</text>
+        </view>
+        <view class="many-people-gathering_right_icon"></view>
+      </view>
+    </view>
+    <!-- 多人收款 记账 end -->
+
+    <!-- 代发货活动部分 start -->
+    <view class="await-shipments">
+      <view class="await-shipments_title">
+        <view class="await-shipments_title_left">待发货活动<view class="await-shipments_title_icon"></view>
+        </view>
+        <view class="await-shipments_title_right">查看全部</view>
+      </view>
+
+      <view class="await-shipments-commodity">
+        <view class="await-shipments-commodity_status">
+          <view class="a_status_left">
+            <text>7月5日已发布7天</text>
+            <text decode>&nbsp;&nbsp;|&nbsp;&nbsp;</text>
+            <text><text class="propelNum">33</text>人查看</text>
+          </view>
+          <view class="a_status_right">进行中</view>
+        </view>
+        <view class="await-shipments-commodity_title">
+          活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位
+        </view>
+        <view class="await-shipments-commodity_bottom">
+          <view class="a_bottom_left">
+            <view class="a_money">
+              <text class="a_commodity_name">SHLL套装</text>
+              <text class="a_commodity_money">￥520.00</text>
+            </view>
+            <view class="a_order">
+              <text class="a_order_sell">已售 <text class="a_order_sell_num">12</text> 单</text>
+              <text class="a_order_await_sell">待发货 <text class="a_order_await_sell_num">12</text> 单</text>
+            </view>
+          </view>
+          <view class="a_bottom_right">安排发货</view>
+        </view>
+      </view>
+    </view>
+    <!-- 代发货活动部分 end -->
+
+  </view>
+</view>

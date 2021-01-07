@@ -1,0 +1,56 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.box-hover {
+background-color: green;
+}
+
+input {
+  border: 1px solid #ccc;
+}
+
+.input-class {
+  color: red;
+}
+
+/* 属性选择器的使用 */
+/* text[data-red="abc"] {
+  color: red;
+} */
+/* ^代表以什么开头 */
+/* text[data-red^="a"] {
+  color: red;
+} */
+/* $代表以什么结尾 */
+/* text[data-red$="a"] {
+  color: red;
+} */
+/* *代表包含什么字母 */
+/* text[data-red*="a"] {
+  color: red;
+} */

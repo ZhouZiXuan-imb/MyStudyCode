@@ -1,0 +1,11 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  /* 让一个普通容器变成一个flex伸缩容器 */
+  display: flex;
+  /* 控制主轴的方向 */
+  flex-direction: column;
+  /* 控制伸缩项目在主轴方向上的对齐方式 */
+  justify-content: space-between;
+  box-sizing: border-box;
+} 

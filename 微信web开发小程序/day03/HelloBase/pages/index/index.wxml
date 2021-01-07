@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 数据绑定 -->
+  <text>{{name}}</text>
+  <text>{{age}}</text>
+  <text>{{married}}</text>
+  <text>{{id}}</text>
+
+
+  <!-- 小程序中的事件 -->
+  <!-- 移动端事件 -->
+  <button bindtap="handleTap"></button>
+
+  <input type="text" bindinput="handleInput" />
+
+  <text>{{text}}</text>
+
+
+  <!-- 下拉刷新按钮 -->
+  <button bindtap="handleRefresh">下拉刷新按钮</button>
+</view>

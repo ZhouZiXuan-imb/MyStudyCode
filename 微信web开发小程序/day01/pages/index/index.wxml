@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- text是小程序提供的基础组件 相当于span -->
+  <!-- 除了文本节点以外的其他节点都无法长按选中 -->
+  <!-- decode属性：是否解码  -->
+  <text decode="false">
+    你好&nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;
+  </text>
+
+  <!-- space属性：显示连续空格 -->
+  <!-- ensp属性值：中文字符空格一半大小  -->
+  <text space="ensp">a啊 实打 实 的 请 问 阿斯蒂芬二 </text>
+  <!-- ensp属性值：中文字符空格大小  -->
+  <text space="emsp">a啊 实打 实 的 请 问 阿斯蒂芬二 </text>
+  <!-- ensp属性值：根据字体设置的空格大小  -->
+  <text space="nbsp">a啊 实打 实 的 请 问 阿斯蒂芬二 </text>
+
+  <!-- user-select控制文字是否可以被选中，没写默认就是不能选中，写了就是可以被选中 -->
+  <text user-select>asdasdasdasdas </text>
+
+  <!-- ============================================================ -->
+
+  <!-- view视图容器，相当于html中的div -->
+  <!-- hover-class="box-hover" 当鼠标点击的时候触发这个class样式 -->
+  <!-- hover-stay-time="2000" 触发这个class，鼠标离开之后效果持续多少秒 -->
+  <view class="box1" hover-class="box-hover" hover-stay-time="2000"></view>
+
+  <!-- ============================================================= -->
+
+  <!-- button按钮组件 -->
+  <button size="default" type="primary">按钮</button>
+  <button size="mini" plain="true">按钮</button>
+  <button size="mini" type="warn" disabled>按钮</button>
+  <button size="mini" loading="true">按钮</button>
+
+  <!-- ============================================================= -->
+
+  <!-- input输入框 -->
+  <input type="text" maxlength="10" password />
+  <input type="text" maxlength="10" placeholder="请输入用户名" placeholder-class="input-class" />
+  <input type="text" maxlength="10" placeholder="请输入用户名" placeholder-style="color:red" />
+
+
+  <!-- ============================================================= -->
+
+  <!-- image图片组件 -->
+  <image src="../../images/2.jpg" mode="aspectFit"></image>
+  <image src="../../images/1.png" mode="aspectFit"></image>
+
+  <!-- ============================================================= -->
+
+  <!-- 属性选择器 -->
+  <text data-red="abc">qwelkjqlkwje</text>
+  <text data-red="cba">asdliquwikeu</text>
+
+  <text user-select>我是{{name}}</text>
+  
+</view>
