@@ -138,6 +138,87 @@
           <view class="a_bottom_right">安排发货</view>
         </view>
       </view>
+
+      <view class="await-shipments-commodity">
+        <view class="await-shipments-commodity_status">
+          <view class="a_status_left">
+            <text>7月5日已发布7天</text>
+            <text decode>&nbsp;&nbsp;|&nbsp;&nbsp;</text>
+            <text><text class="propelNum">33</text>人查看</text>
+          </view>
+          <view class="a_status_right">进行中</view>
+        </view>
+        <view class="await-shipments-commodity_title">
+          活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位
+        </view>
+        <view class="await-shipments-commodity_bottom">
+          <view class="a_bottom_left">
+            <view class="a_money">
+              <text class="a_commodity_name">SHLL套装</text>
+              <text class="a_commodity_money">￥520.00</text>
+            </view>
+            <view class="a_order">
+              <text class="a_order_sell">已售 <text class="a_order_sell_num">12</text> 单</text>
+              <text class="a_order_await_sell">待发货 <text class="a_order_await_sell_num">12</text> 单</text>
+            </view>
+          </view>
+          <view class="a_bottom_right">安排发货</view>
+        </view>
+      </view>
+
+      <view class="await-shipments-commodity">
+        <view class="await-shipments-commodity_status">
+          <view class="a_status_left">
+            <text>7月5日已发布7天</text>
+            <text decode>&nbsp;&nbsp;|&nbsp;&nbsp;</text>
+            <text><text class="propelNum">33</text>人查看</text>
+          </view>
+          <view class="a_status_right">已结束</view>
+        </view>
+        <view class="await-shipments-commodity_title">
+          活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位
+        </view>
+        <view class="await-shipments-commodity_bottom">
+          <view class="a_bottom_left">
+            <view class="a_money">
+              <text class="a_commodity_name">SHLL套装</text>
+              <text class="a_commodity_money">￥520.00</text>
+            </view>
+            <view class="a_order">
+              <text class="a_order_sell">已售 <text class="a_order_sell_num">12</text> 单</text>
+              <text class="a_order_await_sell">待发货 <text class="a_order_await_sell_num">12</text> 单</text>
+            </view>
+          </view>
+          <view class="a_bottom_right">安排发货</view>
+        </view>
+      </view>
+
+      <view class="await-shipments-commodity">
+        <view class="await-shipments-commodity_status">
+          <view class="a_status_left">
+            <text>7月5日已发布7天</text>
+            <text decode>&nbsp;&nbsp;|&nbsp;&nbsp;</text>
+            <text><text class="propelNum">33</text>人查看</text>
+          </view>
+          <view class="a_status_right">已结束</view>
+        </view>
+        <view class="await-shipments-commodity_title">
+          活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位活动描述占位
+        </view>
+        <view class="await-shipments-commodity_bottom">
+          <view class="a_bottom_left">
+            <view class="a_money">
+              <text class="a_commodity_name">SHLL套装</text>
+              <text class="a_commodity_money">￥520.00</text>
+            </view>
+            <view class="a_order">
+              <text class="a_order_sell">已售 <text class="a_order_sell_num">12</text> 单</text>
+              <text class="a_order_await_sell">待发货 <text class="a_order_await_sell_num">12</text> 单</text>
+            </view>
+          </view>
+          <view class="a_bottom_right">安排发货</view>
+        </view>
+      </view>
     </view>
     <!-- 代发货活动部分 end -->
 

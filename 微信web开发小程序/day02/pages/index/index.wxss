@@ -348,6 +348,7 @@
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 15rpx;
+  margin-top: 24rpx;
 }
 
 .await-shipments-commodity_status {
@@ -391,6 +392,21 @@
 
 .a_order_sell_num {
   color: #000;
+}
+
+.a_order_await_sell_num {
+  color:  #b72a2a;
+}
+
+.a_bottom_right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64rpx;
+  width: 176rpx;
+  background-color: #efb600;
+  border-radius: 30rpx;
+  font-size: 26rpx;
 }
 
 /* 代发货活动 end */
