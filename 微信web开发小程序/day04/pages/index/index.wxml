@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 声明式导航 start -->
+
+  <!-- 导航到非tabBar页面 -->
+  <navigator url="/pages/user/user">跳转到user页面</navigator>
+  <!-- 导航到tabBar页面 -->
+  <navigator url="/pages/logs/logs" open-type="switchTab">跳转到日志页</navigator>
+
+  <!-- 声明式导航 end -->
+
+
+
+  <!-- 编程式导航 start -->
+
+  <!-- 导航到非 tabBar 页面 -->
+  <button type="primary" bindtap="handleViewUser" size="mini">跳转到用户页</button>
+  <!-- 导航到 tabBar 页面 -->
+  <button type="primary" bindtap="handleViewLogs" size="mini">跳转到日志页</button>
+
+  <!-- 编程式导航 end -->
+
+
+
+  <!-- 导航传参 start -->
+
+  <!-- 导航到非tabBar页面 -->
+  <navigator url="/pages/user/user?name=zhangsan&age=18">跳转到user页面带参数</navigator>
+  <!-- 导航到tabBar页面 -->
+  <button type="primary" bindtap="handleViewLogs" size="mini">跳转到日志页</button>
+
+  <!-- 导航传参 end -->
+
+
+  <!-- 组件传值 -->
+  <compo prop-number="{{num}}"> 周子轩 </compo>
+
+  <compo slot="zhouzhou"> 周周 </compo>
+  <compo slot="zhuzhu"> 猪猪 </compo>
+
+
+
+</view>

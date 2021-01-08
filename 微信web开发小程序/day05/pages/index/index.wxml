@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<block>
+  <image class="navigationBarImg" src="/images/专题/组 33@2x.png"></image>
+  <text class="navigationBarTitle">专题</text>
+</block>
+<view class="container">
+  <!-- <view class="page-section page-section-spacing swiper"> -->
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#fff" indicator-active-color="#ffd700"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this"  wx:for-index="index" wx:for-item="item">
+          <swiper-item>
+            <image class="swiper_image" src="/images/查看/图层 77@2x.png"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    <!-- </view> -->
+</view>

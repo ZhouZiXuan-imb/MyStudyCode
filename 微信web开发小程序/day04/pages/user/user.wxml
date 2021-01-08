@@ -1,0 +1,9 @@
+<!--pages/user/user.wxml-->
+<view>
+  <text>用户页</text>
+  <!-- 后退导航 -->
+  <navigator open-type="navigateBack" delta="1">回退</navigator>
+
+  <!-- 编程式后退导航 -->
+  <button type="primary" bindtap="handleBack" size="mini">回退</button>
+</view>
