@@ -4,14 +4,54 @@
   <text class="navigationBarTitle">专题</text>
 </block>
 <view class="container">
-  <!-- <view class="page-section page-section-spacing swiper"> -->
-      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#fff" indicator-active-color="#ffd700"
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{background}}" wx:key="*this"  wx:for-index="index" wx:for-item="item">
-          <swiper-item>
-            <image class="swiper_image" src="/images/查看/图层 77@2x.png"></image>
-          </swiper-item>
-        </block>
-      </swiper>
-    <!-- </view> -->
+  <!-- 轮播图 start -->
+  <swiper indicator-dots="{{indicatorDots}}" indicator-color="#fff" indicator-active-color="#ffd700"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+      <swiper-item>
+        <image class="swiper_image" src="/images/查看/图层 77@2x.png"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 轮播图 end -->
+
+  <!-- tab切换 start -->
+  <view class="tab">
+    <view class="tab_date">
+      日期
+      <view class="tab_underscour"></view>
+    </view>
+    <view class="tab_special">专题</view>
+  </view>
+  <!-- tab切换 end -->
+
+  <!-- 商品 start -->
+  <view class="commodity">
+    <view class="commodity_items" wx:for="{{commodityItems}}" wx:for-item="item" wx:key="item">
+      <view class="c_item_top">
+        <image class="c_item_image" src="/images/查看/图层 76@2x.png"></image>
+      </view>
+      <view class="c_item_bottom">
+        <view class="c_item_bottom_top">
+          <view class="c_item_title">忙里忙外 回家吃饭</view>
+        </view>
+        <view class="c_item_bottom_bottom">
+          <view class="c_item_bottom_left">
+            <view class="c_item_price"><text class="c_item_price_num">19.9元</text>起</view>
+            <image class="c_item_lick_icon" src="/images/查看/xin@2x.png"></image><text
+              class="c_item_lick_num">1220</text>
+            <image class="c_item_lick_icon" src="/images/查看/chakan_1@2x.png"></image><text
+              class="c_item_lick_num">1000</text>
+          </view>
+          <view class="c_item_bottom_right">
+            <image src="/images/专题/组 35 拷贝 2@2x.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商品 end -->
+
+
 </view>

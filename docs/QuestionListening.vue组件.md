@@ -932,5 +932,7 @@ import { useEditLabels } from "./useEditLabels";
 
 #### 18. 引入 添加SST题目 组件（components\Question\SST\AddSST\index.vue）
 
-[添加SST题目组件]: ./SST组件.md
+[添加SST添加题目模态框组件]: ./SST组件.md
+
+#### 19. 引入
 

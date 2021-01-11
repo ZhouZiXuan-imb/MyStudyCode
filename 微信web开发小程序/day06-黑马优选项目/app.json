@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/user/user"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#c00000",
+    "navigationBarTitleText": "黑马邮购",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#c00000",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab_icons/home.png",
+        "selectedIconPath": "/images/tab_icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "/images/tab_icons/cate.png",
+        "selectedIconPath": "/images/tab_icons/cate-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/images/tab_icons/cart.png",
+        "selectedIconPath": "/images/tab_icons/cart-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/tab_icons/my.png",
+        "selectedIconPath": "/images/tab_icons/my-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

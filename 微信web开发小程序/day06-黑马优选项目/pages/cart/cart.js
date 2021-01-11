@@ -1,47 +1,12 @@
+// pages/cart/cart.js
 Page({
-  onShareAppMessage() {
-    return {
-      title: 'swiper',
-      path: 'page/component/pages/swiper/swiper'
-    }
-  },
 
   /**
    * 页面的初始数据
    */
   data: {
-    background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
-    indicatorDots: true,
-    vertical: false,
-    autoplay: false,
-    interval: 2000,
-    duration: 500,
-    commodityItems: [1, 2, 3, 4, 5, 6]
-  },
-  changeIndicatorDots() {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
 
-  changeAutoplay() {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
   },
-
-  intervalChange(e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-
-  durationChange(e) {
-    this.setData({
-      duration: e.detail.value
-    })
-  },
-
 
   /**
    * 生命周期函数--监听页面加载

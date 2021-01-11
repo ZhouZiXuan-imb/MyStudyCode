@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索框 start -->
+  <view class="top_search">
+    <input class="top_search_input" type="text" placeholder="搜索" />
+  </view>
+  <!-- 搜索框 end -->
+
+  <!-- 轮播图 start -->
+  <view class="top_swiper">
+    <swiper indicator-dots autoplay interval="4000" circular>
+      <swiper-item wx:for="{{swiperItem}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <image class="swiperImage" src="{{item.image_src}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图 end -->
+
+  <!-- 分类导航 start -->
+  <view class="category">
+    <view wx:for="{{catitems}}" wx:for-item="item" wx:for-index="index" wx:key="index" class="catitems">
+      <image class="cateItems_image" src="{{item.image_src}}"></image>
+    </view>
+  </view>
+  <!-- 分类导航 end -->
+
+  <!-- 楼层 start -->
+  <view class="floor" wx:for="{{FloorData}}" wx:for-item="item" wx:key="id">
+    <image class="floor_title_image" src="{{item.floor_title.image_src}}"></image>
+    <view class="floor_title_image_item" wx:for="{{item.product_list}}" wx:for-item="item" wx:for-index="index"
+      wx:key="index">
+      <image src="{{item.image_src}}" style="width:calc({{item.image_width}}rpx)" mode="widthFix"></image>
+    </view>
+  </view>
+  <!-- 楼层 end -->
+</view>
