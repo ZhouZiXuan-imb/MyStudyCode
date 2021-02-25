@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="600" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('cas')
+
+        const ctx = canvas.getContext('2d');
+
+        // 随机的rgb颜色
+        function randomColor() {
+            const r = parseInt(Math.random() * 255 + 1)
+            const g = parseInt(Math.random() * 255 + 1)
+            const b = parseInt(Math.random() * 255 + 1)
+            return `rgb(${r},${g},${b})`
+
+        }
+
+        // 等分的圆
+        // 第一种方式
+        // function dramAverageCircle(ctx, n) {
+        //     const per = 2 * Math.PI / n
+        //     // 设置一个起始角度
+        //     let startAngle = 0
+        //     for (let i = 0; i < n; i++) {
+        //         ctx.beginPath();
+        //         ctx.fillStyle = randomColor()
+        //         // 找到画布的圆心 
+        //         ctx.moveTo(ctx.canvas.width / 2, ctx.canvas.height / 2)
+        //         // 圆心的起始坐标x,y,圆弧的半径,开始弧度,结束弧度
+        //         ctx.arc(ctx.canvas.width / 2, ctx.canvas.height / 2, 100, startAngle, startAngle + per)
+        //         startAngle += per
+        //         ctx.fill();
+        //     }
+        // }
+        // 第二种方式，利用循环的i
+        function dramAverageCircle(ctx, n) {
+            const per = 2 * Math.PI / n
+            // 设置一个起始角度
+            // let startAngle = 0
+            for (let i = 0; i < n; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = randomColor()
+                // 找到画布的圆心 
+                ctx.moveTo(ctx.canvas.width / 2, ctx.canvas.height / 2)
+                // 圆心的起始坐标x,y,圆弧的半径,开始弧度,结束弧度
+                ctx.arc(ctx.canvas.width / 2, ctx.canvas.height / 2, 100, per * i, per * (i + 1))
+                // startAngle += per
+                ctx.fill();
+            }
+        }
+        dramAverageCircle(ctx, 4)
+
+
+
+    </script>
+</body>
+
+</html>

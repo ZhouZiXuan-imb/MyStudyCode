@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="600" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('cas')
+        const ctx = canvas.getContext('2d');
+        // 设置虚线
+        ctx.setLineDash([10, 10, 20])
+
+        // getLineDash方法 如果设置虚线的数组中 是奇数个 那么getLineDash获取到的数组中会重复两边设置的数组
+        const getLineDash = ctx.getLineDash();
+        console.log(getLineDash);
+        // 开始路径
+        ctx.moveTo(100, 100)
+        ctx.lineTo(300, 100)
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>

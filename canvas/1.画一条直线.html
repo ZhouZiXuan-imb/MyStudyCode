@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* canvas默认的宽高是300*150 */
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="600" height="300"></canvas>
+
+    <script>
+        // 获取canvas标签
+        const canvas = document.getElementById('cas')
+        // 获取绘图工具
+        const ctx = canvas.getContext('2d')
+        //开始绘图
+        // 设置线条起点
+        ctx.moveTo(100, 100)
+        // 设置线条终点(这里只有x轴变了 所以是横向移动 花了一条横线)
+        ctx.lineTo(400, 100)
+        // 设置线条颜色
+        ctx.strokeStyle = 'blue'
+        // 设置线条描边
+        ctx.stroke();
+
+
+        // console.log(ctx);
+        // console.log(canvas);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+            margin: 0 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="900" height="900"></canvas>
+
+    <script>
+        const canvas = document.getElementById('cas');
+
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'blue'
+        ctx.moveTo(300, 300);
+        ctx.lineTo(500, 200);
+        ctx.lineTo(700, 300);
+        ctx.lineTo(600, 300);
+        ctx.lineTo(600, 450);
+        ctx.lineTo(400, 450);
+        ctx.lineTo(400, 300);
+        ctx.lineTo(300, 300);
+
+
+        // ctx.beginPath();
+        ctx.moveTo(450, 320);
+        ctx.lineTo(450, 420);
+        ctx.lineTo(450, 420);
+        ctx.lineTo(550, 420);
+        ctx.lineTo(550, 420);
+        ctx.lineTo(550, 320);
+        ctx.lineTo(450, 320);
+        ctx.fill();
+
+
+    </script>
+</body>
+
+</html>

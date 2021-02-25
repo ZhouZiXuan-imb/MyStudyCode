@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="600" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('cas')
+        const ctx = canvas.getContext('2d');
+        // 开始路径
+        ctx.moveTo(100, 100)
+        ctx.lineTo(300, 100)
+        ctx.strokeStyle = 'red'
+        // 设置线条的宽度
+        ctx.lineWidth = '20'
+        // 设置绘制图形样式 lineCap:线末端的样式 butt(默认样式) round(圆角) square(方角)
+        ctx.lineCap = 'butt'
+        ctx.stroke();
+
+        // 开始一个新路径
+        ctx.beginPath();
+        // 开始路径
+        ctx.moveTo(100, 200)
+        ctx.lineTo(300, 200)
+        ctx.strokeStyle = 'blue'
+        ctx.lineCap = 'round'
+        ctx.stroke();
+
+        // 开始一个新路径
+        ctx.beginPath();
+        // 开始路径
+        ctx.moveTo(100, 300)
+        ctx.lineTo(300, 300)
+        ctx.strokeStyle = 'green'
+        ctx.lineCap = 'square'
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* canvas默认的宽高是300*150 */
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="600" height="500"></canvas>
+
+    <script>
+        // 获取canvas标签
+        const canvas = document.getElementById('cas')
+        // 获取绘图工具
+        const ctx = canvas.getContext('2d')
+        //开始绘图
+        // 设置线条起点
+        ctx.moveTo(100, 100)
+        ctx.lineTo(400, 100)
+        ctx.lineTo(400, 400)
+        // ctx.lineTo(100, 400)
+        ctx.lineTo(100, 100)
+        ctx.lineTo(100.5, 100) // 手动闭合路径，给坐标后面一位小数点
+        // 自动闭合路径
+        // ctx.closePath();
+        // 设置线条颜色
+        ctx.strokeStyle = 'blue'
+        ctx.lineWidth = 10
+        // 设置线条描边
+        ctx.stroke();
+        // 设置描边宽度
+        // 设置填充
+        ctx.fill();
+        //
+
+
+        // console.log(ctx);
+        // console.log(canvas);
+    </script>
+</body>
+
+</html>

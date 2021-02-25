@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cas {
+            border: 1px solid #000;
+            background-color: #cf4d3f;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="1900" height="900"></canvas>
+    <script>
+        const cas = document.getElementById('cas')
+
+        const ctx = cas.getContext('2d');
+
+        ctx.moveTo(100, 700)
+        // 上
+        ctx.lineTo(100, 300)
+        // 右
+        ctx.lineTo(200, 300)
+        // 上
+        ctx.lineTo(200, 250)
+        // 右
+        ctx.lineTo(500, 250)
+        // 斜
+        ctx.lineTo(530, 280)
+        // 右
+        ctx.lineTo(560, 280)
+        // 上
+        ctx.lineTo(560, 200)
+        // 右
+        ctx.lineTo(620, 200)
+        // 上
+        ctx.lineTo(620, 160)
+        // 大门左上角
+        ctx.lineTo(720, 60)
+        // 大门上边中间
+        ctx.lineTo(1180, 60)
+        // 大门右上角
+        ctx.lineTo(1280, 160)
+        // 下
+        ctx.lineTo(1280, 200)
+        // 右
+        ctx.lineTo(1340, 200)
+        // 下
+        ctx.lineTo(1340, 280)
+        // 右
+        ctx.lineTo(1370, 280)
+        // 斜
+        ctx.lineTo(1400, 250)
+        // 右
+        ctx.lineTo(1700, 250)
+        // 下
+        ctx.lineTo(1700, 300)
+        // 右
+        ctx.lineTo(1800, 300)
+        // 下
+        ctx.lineTo(1800, 700)
+        // 左
+        ctx.lineTo(1700, 700)
+        // 上
+        ctx.lineTo(1700, 430)
+        // 左
+        ctx.lineTo(1450, 430)
+        // 下
+        ctx.lineTo(1450, 700)
+        // 左
+        ctx.lineTo(1180, 700)
+        // 上
+        ctx.lineTo(1180, 300)
+        // 左
+        ctx.lineTo(720, 300)
+        // 下
+        ctx.lineTo(720, 700)
+        // 左
+        ctx.lineTo(450, 700)
+        // 上
+        ctx.lineTo(450, 430)
+        // 左
+        ctx.lineTo(200, 430)
+        // 下
+        ctx.lineTo(200, 700)
+        // 闭合
+        ctx.closePath();
+        var grad1 = ctx.createLinearGradient(0, 100, 0, 700); //创建一个渐变色线性对象
+        grad1.addColorStop(0, "#f2bb6f");                  //定义渐变色颜色
+        grad1.addColorStop(1, "#cf4d3f");
+        ctx.fillStyle = grad1;                         //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+
+        // 左侧的柱子
+        ctx.beginPath();
+        ctx.moveTo(120, 700)
+        ctx.lineTo(120, 320)
+        ctx.lineTo(180, 320)
+        ctx.lineTo(180, 700)
+        var grad2 = ctx.createLinearGradient(0, 300, 0, 700); //创建一个渐变色线性对象
+        grad2.addColorStop(0, "#f2bb6f"); //定义渐变色颜色
+        grad2.addColorStop(1, "#cf4d3f");
+        ctx.fillStyle = grad2; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+        // 左侧的柱子内部的柱子
+        ctx.beginPath();
+        ctx.moveTo(140, 700)
+        ctx.lineTo(140, 400)
+        ctx.lineTo(160, 400)
+        ctx.lineTo(160, 700)
+        var grad3 = ctx.createLinearGradient(0, 400, 0, 700); //创建一个渐变色线性对象
+        grad3.addColorStop(0, "#f2bb6f"); //定义渐变色颜色
+        grad3.addColorStop(1, "#cf4d3f");
+        ctx.fillStyle = grad3; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+        // 左侧小门上面的横向柱子
+        ctx.beginPath();
+        ctx.moveTo(220, 350);
+        // 右
+        ctx.lineTo(430, 350)
+        // 下
+        ctx.lineTo(430, 400)
+        // 左
+        ctx.lineTo(220, 400)
+        // 闭合
+        ctx.closePath();
+        ctx.fillStyle = '#f2bb6f'
+        ctx.fill();
+
+
+        // 左侧小门左边的柱子
+        ctx.beginPath();
+        ctx.moveTo(460, 700);
+        // 上
+        ctx.lineTo(460, 320)
+        // 右
+        ctx.lineTo(520, 320)
+        // 下
+        ctx.lineTo(520, 700)
+        // 闭合
+        ctx.closePath();
+        ctx.fillStyle = grad2
+        ctx.fill();
+
+
+        // 左侧的柱子内部的柱子
+        ctx.beginPath();
+        ctx.moveTo(480, 700)
+        ctx.lineTo(480, 400)
+        ctx.lineTo(500, 400)
+        ctx.lineTo(500, 700)
+        ctx.fillStyle = grad3; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+
+        // 左侧的柱子最右侧的柱子
+        ctx.beginPath();
+        ctx.moveTo(530, 700)
+        ctx.lineTo(530, 280)
+        ctx.lineTo(560, 280)
+        ctx.lineTo(560, 700)
+        ctx.fillStyle = grad2; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+
+        //  大门左侧的柱子
+        ctx.beginPath();
+        ctx.moveTo(600, 700)
+        ctx.lineTo(600, 400)
+        ctx.lineTo(640, 400)
+        ctx.lineTo(640, 700)
+        ctx.fillStyle = grad3; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+
+        // 右侧的柱子
+        ctx.beginPath();
+        ctx.moveTo(1720, 700)
+        ctx.lineTo(1720, 320)
+        ctx.lineTo(1780, 320)
+        ctx.lineTo(1780, 700)
+
+        ctx.fillStyle = grad2; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+        // 右侧的柱子内部的柱子
+        ctx.beginPath();
+        ctx.moveTo(1740, 700)
+        ctx.lineTo(1740, 400)
+        ctx.lineTo(1760, 400)
+        ctx.lineTo(1760, 700)
+        ctx.fillStyle = grad3; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+        // 右门的左侧柱子
+        ctx.beginPath();
+        ctx.moveTo(1380, 700)
+        ctx.lineTo(1380, 320)
+        ctx.lineTo(1440, 320)
+        ctx.lineTo(1440, 700)
+
+        ctx.fillStyle = grad2; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+        // 右门的左侧柱子内部的柱子
+        ctx.beginPath();
+        ctx.moveTo(1400, 700)
+        ctx.lineTo(1400, 400)
+        ctx.lineTo(1420, 400)
+        ctx.lineTo(1420, 700)
+        ctx.fillStyle = grad3; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+        // 左侧的柱子
+        ctx.beginPath();
+        ctx.moveTo(1340, 700)
+        ctx.lineTo(1340, 280)
+        ctx.lineTo(1370, 280)
+        ctx.lineTo(1370, 700)
+
+        ctx.fillStyle = grad2; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+
+
+        //  大门左侧的柱子
+        ctx.beginPath();
+        ctx.moveTo(1260, 700)
+        ctx.lineTo(1260, 400)
+        ctx.lineTo(1300, 400)
+        ctx.lineTo(1300, 700)
+        ctx.fillStyle = grad3; //设置fillStyle为当前的渐变对象
+        ctx.fill();
+    </script>
+</body>
+
+</html>

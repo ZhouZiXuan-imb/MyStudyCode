@@ -1,0 +1,46 @@
+</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* canvas默认的宽高是300*150 */
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cas" width="600" height="500"></canvas>
+
+    <script>
+        // 获取canvas标签
+        const canvas = document.getElementById('cas')
+        // 获取绘图工具
+        const ctx = canvas.getContext('2d')
+        //开始绘图
+        // 设置线条起点
+        // 最外层的正方形
+        ctx.strokeStyle = 'red'
+        ctx.moveTo(100, 100)
+        ctx.lineTo(400, 100)
+        ctx.stroke();
+
+        // 开启新路径
+        ctx.beginPath();
+        // 开启新路径之后，旧路径中的画笔样式会继承给新路径，新路径可以重新设置画笔样式
+
+        ctx.strokeStyle = 'blue'
+        ctx.moveTo(100, 300)
+        ctx.lineTo(400, 300)
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>
